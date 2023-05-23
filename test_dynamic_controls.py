@@ -27,19 +27,24 @@ class TestWebPage(unittest.TestCase):
 
         # Assert that the button now says "Add"
         self.assertEqual("Add", self.driver.find_element(By.CSS_SELECTOR, "#checkbox-example button").text)
+        self.driver.save_screenshot('screenshots/testing_checkbox_button.png')
+
         # Assert that the checkbox is not present
         self.assertEqual(0, len(self.driver.find_elements(By.CSS_SELECTOR, "#checkbox")))
+        self.driver.save_screenshot('screenshots/testing_checkbox.png')
 
     def test_enable_disable_input(self):
         # Click on the "Enable" button
         self.driver.find_element(By.CSS_SELECTOR, "#input-example button").click()
         # Wait for 3 seconds (the duration of setTimeout in your script)
         time.sleep(3)
+        self.driver.save_screenshot('screenshots/testing_input_button.png')
 
         # Assert that the button now says "Disable"
         self.assertEqual("Disable", self.driver.find_element(By.CSS_SELECTOR, "#input-example button").text)
         # Assert that the input is enabled
         self.assertIsNone(self.driver.find_element(By.CSS_SELECTOR, "#input-example input").get_attribute("disabled"))
+        self.driver.save_screensho('screenshots/testing_input_disabled.png')
 
 
 if __name__ == "__main__":
