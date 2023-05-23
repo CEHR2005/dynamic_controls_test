@@ -1,1 +1,1 @@
-C:\Users\sench\PycharmProjects\dynamic_controls_test\venv\Scripts\python.exe C:\Users\sench\PycharmProjects\dynamic_controls_test\main.py
+C:\Users\sench\PycharmProjects\dynamic_controls_test\venv\Scripts\python.exe main.py
