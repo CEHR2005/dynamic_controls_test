@@ -44,7 +44,7 @@ class TestWebPage(unittest.TestCase):
         self.assertEqual("Disable", self.driver.find_element(By.CSS_SELECTOR, "#input-example button").text)
         # Assert that the input is enabled
         self.assertIsNone(self.driver.find_element(By.CSS_SELECTOR, "#input-example input").get_attribute("disabled"))
-        self.driver.save_screensho('screenshots/testing_input_disabled.png')
+        self.driver.save_screenshot('screenshots/testing_input_disabled.png')
 
 
 if __name__ == "__main__":
